@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.API", "GetSocial.API\GetSocial.API.csproj", "{090DA7FA-FF6F-4F27-A10B-A0BEEC57027A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.Domain", "GetSocial.Domain\GetSocial.Domain.csproj", "{77C4E216-3EFB-4AAD-A6AC-055B4F3238F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.Application", "GetSocial.Application\GetSocial.Application.csproj", "{D3D24B4E-68A8-4F18-B64E-B301F91EF464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.DAL", "GetSocial.DAL\GetSocial.DAL.csproj", "{40CAE749-72AC-4A64-9A9C-054051A04C1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{090DA7FA-FF6F-4F27-A10B-A0BEEC57027A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090DA7FA-FF6F-4F27-A10B-A0BEEC57027A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090DA7FA-FF6F-4F27-A10B-A0BEEC57027A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090DA7FA-FF6F-4F27-A10B-A0BEEC57027A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C4E216-3EFB-4AAD-A6AC-055B4F3238F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C4E216-3EFB-4AAD-A6AC-055B4F3238F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C4E216-3EFB-4AAD-A6AC-055B4F3238F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C4E216-3EFB-4AAD-A6AC-055B4F3238F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3D24B4E-68A8-4F18-B64E-B301F91EF464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D24B4E-68A8-4F18-B64E-B301F91EF464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D24B4E-68A8-4F18-B64E-B301F91EF464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D24B4E-68A8-4F18-B64E-B301F91EF464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CAE749-72AC-4A64-9A9C-054051A04C1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CAE749-72AC-4A64-9A9C-054051A04C1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CAE749-72AC-4A64-9A9C-054051A04C1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CAE749-72AC-4A64-9A9C-054051A04C1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB6A35C8-FC6E-4CAA-849B-6027F286782C}
+	EndGlobalSection
+EndGlobal
