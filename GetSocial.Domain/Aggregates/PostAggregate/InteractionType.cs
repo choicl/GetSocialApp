@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GetSocial.Domain.Models
+namespace GetSocial.Domain.Aggregates.PostAggregate
 {
-    public class Post
+    public enum InteractionType
     {
-        public int Id { get; set; }
-        public string Text { get; set; }
+         Like,
+         Dislike
     }
 }
