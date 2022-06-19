@@ -1,4 +1,4 @@
-﻿using GetSocial.Domain.Models;
+﻿using GetSocial.Domain.Aggregates.PostAggregate;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GetSocial.API.Controllers.V2
@@ -12,7 +12,7 @@ namespace GetSocial.API.Controllers.V2
         [Route("{id}")]
         public IActionResult GetById(int id)
         {
-            var post = new Post() { Id = id, Text = "Hello,universe" };
+            var post = new Post() { Id = id, TextContent = "Hello,universe" };
             return Ok(post);
         }
     }
