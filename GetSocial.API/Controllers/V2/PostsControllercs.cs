@@ -10,10 +10,9 @@ namespace GetSocial.API.Controllers.V2
     {
         [HttpGet]
         [Route("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(Guid id)
         {
-            var post = new Post() { Id = id, TextContent = "Hello,universe" };
-            return Ok(post);
+            return Ok();
         }
     }
 }
