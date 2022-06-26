@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GetSocial.API.MappingProfiles;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 
 namespace GetSocial.API.Registrars
@@ -24,7 +25,10 @@ namespace GetSocial.API.Registrars
                     config.SubstituteApiVersionInUrl = true;
                 }
             );
-
+            builder.Services.AddMvc(options =>
+            {
+                options.SuppressAsyncSuffixInActionNames = false;
+            });
         }
     }
 }

@@ -18,7 +18,7 @@ namespace GetSocial.DAL
 
         }
         
-        public DbSet<UserProfile> UserPorProfiles { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<Post> Posts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

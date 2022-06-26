@@ -5,11 +5,11 @@ namespace GetSocial.API.Controllers.V1
 {
     [ApiVersion("1.0")]
     [ApiController]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route(ApiRoutes.BaseRoute)]
     public class PostsController : Controller
     {
         [HttpGet]
-        [Route("{id}")]
+        [Route(ApiRoutes.Posts.GetById)]
         public IActionResult GetById(Guid id)
         {
             return Ok();

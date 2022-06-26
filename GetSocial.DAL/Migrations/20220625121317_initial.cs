@@ -68,7 +68,7 @@ namespace GetSocial.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserPorProfiles",
+                name: "UserProfiles",
                 columns: table => new
                 {
                     UserProfileId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -84,7 +84,7 @@ namespace GetSocial.DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserPorProfiles", x => x.UserProfileId);
+                    table.PrimaryKey("PK_UserProfiles", x => x.UserProfileId);
                 });
 
             migrationBuilder.CreateTable(
@@ -128,14 +128,13 @@ namespace GetSocial.DAL.Migrations
                 name: "UserTokens",
                 columns: table => new
                 {
-                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LoginProvider = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserTokens", x => x.UserId);
                 });
 
             migrationBuilder.CreateTable(
@@ -152,9 +151,9 @@ namespace GetSocial.DAL.Migrations
                 {
                     table.PrimaryKey("PK_Posts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Posts_UserPorProfiles_UserProfileId",
+                        name: "FK_Posts_UserProfiles_UserProfileId",
                         column: x => x.UserProfileId,
-                        principalTable: "UserPorProfiles",
+                        principalTable: "UserProfiles",
                         principalColumn: "UserProfileId",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -249,7 +248,7 @@ namespace GetSocial.DAL.Migrations
                 name: "Posts");
 
             migrationBuilder.DropTable(
-                name: "UserPorProfiles");
+                name: "UserProfiles");
         }
     }
 }
