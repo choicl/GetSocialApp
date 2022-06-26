@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GetSocial.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220622193627_initial")]
+    [Migration("20220625121317_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -116,7 +116,7 @@ namespace GetSocial.DAL.Migrations
 
                     b.HasKey("UserProfileId");
 
-                    b.ToTable("UserPorProfiles");
+                    b.ToTable("UserProfiles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -268,19 +268,17 @@ namespace GetSocial.DAL.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("LoginProvider")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Value")
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId");
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("UserTokens");
                 });
@@ -346,7 +344,7 @@ namespace GetSocial.DAL.Migrations
 
                             b1.HasKey("UserProfileId");
 
-                            b1.ToTable("UserPorProfiles");
+                            b1.ToTable("UserProfiles");
 
                             b1.WithOwner()
                                 .HasForeignKey("UserProfileId");

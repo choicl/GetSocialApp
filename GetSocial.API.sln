@@ -3,13 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.API", "GetSocial.API\GetSocial.API.csproj", "{090DA7FA-FF6F-4F27-A10B-A0BEEC57027A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSocial.API", "GetSocial.API\GetSocial.API.csproj", "{090DA7FA-FF6F-4F27-A10B-A0BEEC57027A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.Domain", "GetSocial.Domain\GetSocial.Domain.csproj", "{77C4E216-3EFB-4AAD-A6AC-055B4F3238F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSocial.Domain", "GetSocial.Domain\GetSocial.Domain.csproj", "{77C4E216-3EFB-4AAD-A6AC-055B4F3238F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.Application", "GetSocial.Application\GetSocial.Application.csproj", "{D3D24B4E-68A8-4F18-B64E-B301F91EF464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSocial.Application", "GetSocial.Application\GetSocial.Application.csproj", "{D3D24B4E-68A8-4F18-B64E-B301F91EF464}"
+	ProjectSection(ProjectDependencies) = postProject
+		{40CAE749-72AC-4A64-9A9C-054051A04C1F} = {40CAE749-72AC-4A64-9A9C-054051A04C1F}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetSocial.DAL", "GetSocial.DAL\GetSocial.DAL.csproj", "{40CAE749-72AC-4A64-9A9C-054051A04C1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetSocial.DAL", "GetSocial.DAL\GetSocial.DAL.csproj", "{40CAE749-72AC-4A64-9A9C-054051A04C1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
