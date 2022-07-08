@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GetSocial.Application.ResultsModel;
 using GetSocial.Domain.Aggregates.UserProfileAggregate;
 using MediatR;
 
 namespace GetSocial.Application.UserProfiles.Commands
 {
-    public class UpdateUserProfileBasicInfoCommand : IRequest
+    public class UpdateUserProfileBasicInfoCommand : IRequest<OperationResults<UserProfile>>
     {
         public Guid UserProfileId { get; set; }
         public string FirstName { get; set; }

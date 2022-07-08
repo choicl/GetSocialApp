@@ -1,7 +1,7 @@
 namespace GetSocial.Application.Enums;
 
-public enum ErrorCodes
+public enum ErrorCode
 {
-    NotFound = 1,
-    
+    NotFound = 404,
+    ServerError = 500
 }
