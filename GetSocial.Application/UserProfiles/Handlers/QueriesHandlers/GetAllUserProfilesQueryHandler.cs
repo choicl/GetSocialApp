@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GetSocial.Application.ResultsModel;
 using GetSocial.Application.UserProfiles.Queries;
 using GetSocial.DAL;
 using GetSocial.Domain.Aggregates.UserProfileAggregate;
@@ -11,7 +12,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GetSocial.Application.UserProfiles.Handlers.QueriesHandlers
 {
-    public class GetAllUserProfilesQueryHandler : IRequestHandler<GetAllUserProfilesQuery, IEnumerable<UserProfile>>
+    public class GetAllUserProfilesQueryHandler : IRequestHandler<GetAllUserProfilesQuery, 
+        OperationResults<IEnumerable<UserProfile>>>
     {
         private readonly DataContext _dataContext;
 
@@ -19,10 +21,12 @@ namespace GetSocial.Application.UserProfiles.Handlers.QueriesHandlers
         {
             _dataContext = dataContext;
         }
-        public async Task<IEnumerable<UserProfile>> Handle(GetAllUserProfilesQuery request, 
+        public async Task<OperationResults<IEnumerable<UserProfile>>> Handle(GetAllUserProfilesQuery request, 
             CancellationToken cancellationToken)
         {
-            return await _dataContext.UserProfiles.ToListAsync();
+            var result = new OperationResults<IEnumerable<UserProfile>>();
+            result.Payload = await _dataContext.UserProfiles.ToListAsync();
+            return result;
         }
     }
 }

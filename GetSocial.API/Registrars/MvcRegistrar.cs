@@ -1,4 +1,5 @@
-﻿using GetSocial.API.MappingProfiles;
+﻿using GetSocial.API.Filters;
+using GetSocial.API.MappingProfiles;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 
@@ -9,7 +10,11 @@ namespace GetSocial.API.Registrars
         public void RegisterServices(WebApplicationBuilder builder)
         {
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers(config =>
+            {
+                config.Filters.Add((typeof(AppExceptionHandler)));
+            });
+            
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddApiVersioning(config =>

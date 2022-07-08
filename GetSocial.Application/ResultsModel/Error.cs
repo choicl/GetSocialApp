@@ -1,7 +1,9 @@
+using GetSocial.Application.Enums;
+
 namespace GetSocial.Application.ResultsModel;
 
-public class Errors
+public class Error
 {
-    public int Code { get; set; }
+    public ErrorCode Code { get; set; }
     public string Message { get; set; }
 }
